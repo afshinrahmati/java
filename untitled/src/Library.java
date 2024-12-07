@@ -22,11 +22,13 @@ public class Library {
                 library.create(ids,names,ages,genders);
                 break;
             case 2:
+                library.Delete(ids,names,ages,genders);
                 break;
             case 3:
                 library.search(ids,names,ages,genders);
                 break;
             case 4:
+                library.Update(ids,names,ages,genders);
                 break;
             default:
                 System.out.println("By");
@@ -68,13 +70,45 @@ public class Library {
 
         library.jobs(ids,names,ages,genders);
     }
+    private void Delete(int[] ids, String[] names, int[] ages, String[] genders) {
+        Library library = new Library();
+        System.out.println("What is your ID?");
+        Scanner scanner = new Scanner(System.in);
+        int id = scanner.nextInt();
+        ids[id] = 0;
+        names[id] =  null;
+        ages[id] = 0;
+        genders[id] = null;
+        System.out.println("DELETE:" + id);
+        library.jobs(ids,names,ages,genders);
+    }
+    private void Update(int[] ids, String[] names, int[] ages, String[] genders) {
+        Library library = new Library();
+
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("What is your ID?");
+        int id = scanner.nextInt();
+        System.out.println("What is your new name?");
+        String name = scanner.nextLine();
+
+        System.out.println("How old are you?");
+        int age = scanner.nextInt();
+
+        System.out.println("What is your gender? M<Male>, F<Female>");
+        String gender = scanner.nextLine();
+        ids[id]=id ;
+        names[id] = name;
+        ages[id] = age;
+        genders[id] = gender;
+        library.jobs(ids,names,ages,genders);
+    }
     private int getNextAvailableIndex(int[] id) {
         for(int i = 0 ; i < id.length ; i++) {
             if(id[i] == 0) {
-                System.out.println(i);
                 return i;
             }
         }
         return -1;
     }
+
 }
