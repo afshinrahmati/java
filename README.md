@@ -114,3 +114,34 @@ save a collection of char.
     for(int n: array){}
 ```
 
+### REFRENCE TYPES
+ref to an object
+
+1) object
+
+### PRIMITIVE_REFRENCE_IN_MEMORY
+![alt text](./ref.png)
+
+store in the Heap
+1) ref -->cell --> value ==> s=t ==> s ref to cell t
+2) primitive --> value ==> copy the value in new cell
+```
+    method(first,seccond,number)
+    {
+        <!-- now there new persion.age too change to 12, because they are ref in a pointer just cell is different not value  -->
+        first.age = 12
+        <!-- there myInt not change because primitive type do not ref and just copy in a cell -->
+        number = 56
+        <!-- there is not chnage the value on new Pesrion2 just on seccond beacue it ref on new object -->
+        seccond = new Persopn() 
+
+    }
+
+    call => method(new persopn,new Pesrion2,myInt)
+    
+
+```
+### 
+call by value ---> primitive
+call by pointer --> send Object like String
+call refernce ---> 
