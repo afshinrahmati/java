@@ -132,12 +132,37 @@ store in the Heap
         first.age = 12
         <!-- there myInt not change because primitive type do not ref and just copy in a cell -->
         number = 56
-        <!-- there is not chnage the value on new Pesrion2 just on seccond beacue it ref on new object -->
+        <!-- there is not chnage the value on new Pesrion2 just on seccond beacue it ref on new object and last onject const on the memry -->
         seccond = new Persopn() 
+
 
     }
 
     call => method(new persopn,new Pesrion2,myInt)
+
+    <!-- 2 -->
+    m1(int x,Student t)
+        x = 13
+        t.name = "heshmat"
+
+    int a = 12
+    m1(a)
+    print a ==> 12 beacuse it is primitive type and x copu on an other cell of memory if it was reference type change the value
+    m1(new studned.name = amir)
+    prit studned.name ==> heshmat becace ref type chnage the parameyrt
+
+    new int[] ===> it is array that refrenxtype
+    t(int a[])
+        a = 909
+        a= new int[] ==> there a ref to new onject and do not any effiect on an other object
+    a= new int[12];
+    a[2] = 90
+    t(a) ==> 909
+    print(a)
+
+
+    
+
     
 
 ```
@@ -145,3 +170,22 @@ store in the Heap
 call by value ---> primitive
 call by pointer --> send Object like String
 call refernce ---> 
+
+## MEMORY(RAM)
+1) HEAP
+* OBJECT that value and not ref that ref store in stack
+* garbage collector just is in there
+2) STACK
+* PRIMITIVE TYPE
+* ref the Object 
+* after use a vaivable it delete automaticly from ram and is all of the langages 
+
+### JVM(MEMEORY)
+1) -Xms ==> heap noramal size
+2) -Xmx ==> heap incress size
+3) -Xss ==> stack incress size
+
+* java -Xms512m -Xmx3750m Person
+* java -Xss4m Test
+* java -Xmx3750m -Xss4m Main  
+* if new alot ==> Error java heap space ,if in function we don not braek; ==> StackOverflow Error
