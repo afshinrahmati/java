@@ -189,3 +189,95 @@ call refernce --->
 * java -Xss4m Test
 * java -Xmx3750m -Xss4m Main  
 * if new alot ==> Error java heap space ,if in function we don not braek; ==> StackOverflow Error
+
+
+
+
+### FINALIZE
+1) Garbage Collection just Delete the Meomey somtimes an aobject get a lot of source withou RAM like file , db ,... garabge collection can not remove them and we have to remove them with this method.
+```
+ private voide finalize() {
+    System.oit.println();
+ }
+ System.gc();
+```
+2) it is good for print log
+
+## constructor
+when an object create it create automaticly and it ready the object for the use
+A constructor in Java is a special method that is used to initialize objects. The constructor is called when an object of a class is created. It can be used to set initial values for object attributes:
+## Block
+it is use when we want to use that we do not have any paramert tht ppass to the objec and if we have any parametr we can use constructor
+
+
+# package
+* include some file
+* *ach package just has one public class that should equals with the name class
+an othe can not have publixc void main and with and name in class and floder
+java.util.sannder
+‍‍‍‍‍``
+    import java.util.Scanner
+    java.lang
+        - lang.String
+        - lang.Math
+    java.util
+        - java.util.Scanner
+        - java.util.Arrays   
+    ** all package in java.lang is uses automaticly.    
+`` 
+
+# access
+
+1) public ==> just use java.*
+2) private just use in package and class
+3) not private and no public ==> java.u.p just that class are in the same packeage java.ir.oop both file should exit on there
+
+# Static
+* that is a property for a class not an object like in a class year or length is same for all product in all object is same
+* a static just has a cell in memeory
+* without create an object we can use a static valriable very easily.
+* if an object not static it when it create it has a cell in memeory with create each new object
+* is static method just we can use that property is static or method static
+* static just do operation not behavir
+``
+    # line
+    public static int MAX_AGE = 84;
+    static String  name = theDefaultName() // the method is static so it hae to static
+    private static String theDefaultName() {
+        return "afshin"
+    }
+    # static Block
+    stati String Name;
+    static int MAX_AGE
+    static{
+        MAX_AGE = 90;
+        Name = "afshin"
+    }
+``
+# pointe
+* when a class called ,part of jvm with classLoader load this class  and give some part (initialize)
+
+* each time when we call new an object:0) one time create static line and block  1) line value ; 2) instance initialization block; 3) constructor 
+![alt text](./initi.png)
+* garabge collector can not delete static 
+``
+System.gc()
+Thread.sleep(1000)
+``
+
+
+
+
+# singleton
+we create one time object and all the time we use it when call from the memory
+``
+    public class Singleton {
+        private static singleton instance = new Singleton();
+        // constructor is private and just in this class just can create
+        private Singleton () {}
+
+        public static Singleton getInstance() {
+            return instance
+        }
+    }
+``
