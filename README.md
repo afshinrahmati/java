@@ -409,3 +409,26 @@ jar cf <name> <name file class>
 * @retun return 
 */
 ``
+
+# super and this
+![alt text](./super.png)
+
+* super is for parent
+* this just in methode
+* all class in java extends fron object by defualt
+``
+toString
+finalize
+equals
+hashCode
+all of them are in iObjce
+``
+# Composition<has a>
+* it is different with is a< extenct>
+``
+class Human {
+    private heart;
+    privaet leftHand
+    private rightHand
+}
+``
