@@ -226,12 +226,13 @@ java.util.sannder
     ** all package in java.lang is uses automaticly.    
 `` 
 
-# access
+# package access
+![alt text](./access.png)
 
 1) public ==> just use java.*
 2) private just use in package and class
 3) not private and no public ==> java.u.p just that class are in the same packeage java.ir.oop both file should exit on there
-
+4) protected ==> just the class that Inheritance on this can just access
 # Static
 * that is a property for a class not an object like in a class year or length is same for all product in all object is same
 * a static just has a cell in memeory
@@ -281,3 +282,9 @@ we create one time object and all the time we use it when call from the memory
         }
     }
 ``
+# Inheritance(IS_A)
+* good for reuse abel
+* child class can not delete a property from super class
+## Override
+* change a behavior in child class and it is different on super class
+* In Override we can not chnage the acess ==> public != private
