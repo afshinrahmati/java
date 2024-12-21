@@ -288,3 +288,124 @@ we create one time object and all the time we use it when call from the memory
 ## Override
 * change a behavior in child class and it is different on super class
 * In Override we can not chnage the acess ==> public != private
+
+##  varargs;
+* if we have a method that has a lot of paramert we  can describe like this:
+``
+// there we can print ziro or many string
+void print(String... args) {...}.
+
+print();
+print("afshin");
+print("a","b","c");
+
+``
+``
+static void print(String... params) {
+    String[] array = param
+}
+``
+
+# PRIMITIVE WRAPPER CLASSES
+* when we need a primitive type that work like object we use primitive rapper class
+1) Byte
+2) short
+3) Integer
+4) Long
+5) Float
+6) Double
+7) Character
+8) Boolean.
+
+``
+Double n = new Double(12.2);
+n.doubleValue();
+n.intValue();
+n.MAX_VALUE;
+
+Integer a = new Integer(12);
+``
+* autoboxing:
+Integer i = 2; // insetead of new Integer();
+* unboxing:
+int a = new Integer(2);
+
+# Method Overloading
+![alt text](./method-over-loading.png)
+
+* in a class we have a lot of same name method but with different parameter.
+
+# equals
+* it is good for  Object
+* return boolean
+![alt text](./equals.png)
+
+# final Variable
+* constanct == final
+``
+final int a = 90;
+``
+
+# Mutable & Immutable
+Mutable
+those objects that can be cahange the Variable ,....
+* has setter
+* has method for set value
+* change state
+Immutable
+* it is for object some object Mutable and some of them are Immutable
+* final !== Immutable<state>
+* + Immutable are easily to understood
+* + Thread-safe
+* all PRIMITIVE WRAPPER CLASSES are 
+
+# enum(enumeration)
+
+``
+enum Color {
+    BLACK,RED
+};
+Color.values();
+``
+# pointe
+* when a class called ,part of jvm with classLoader load this class  and give some part (initialize)
+
+* each time when we call new an object:0) one time create static line and block  1) line value ; 2) instance initialization block; 3) constructor 
+![alt text](./initi.png)
+* garabge collector can not delete static 
+``
+System.gc()
+Thread.sleep(1000)
+``
+* if we have an object (s = new car) and log the s ==> this object automaticaly called toString method.
+* 
+‍‍‍``
+// can not accept null if we want it is optional and it full auto 0;
+private int age;
+// fot handle null we can use class wrapped;
+private Integer age = null;
+``
+* if we write a final we have to full it in block or constructor
+
+
+# JAR (Java Archive)
+jar cf <name> <name file class>
+* it is look .zip but for java.
+* a place that we can hold the java class.
+* JAR include .class.
+# Classpath(CP)
+* aprameter on JVM
+
+# javadoc
+* write document in java.
+``
+/** 
+* this class in good
+* @author afshin Rahmati.
+* @see java.lang.String
+/** 
+* that is test 
+* @param id the number
+* @retun return 
+*/
+``
