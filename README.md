@@ -288,6 +288,31 @@ we create one time object and all the time we use it when call from the memory
 ## Override
 * change a behavior in child class and it is different on super class
 * In Override we can not chnage the acess ==> public != private
+### annotation
+* int start with `@` like `@Override`
+* Metadata ---> descaribe a method or class
+``
+class Animal {
+    public void talk(){}
+}
+class Dog extends Animal {
+    private string name
+    @Override
+    public String toString() {
+        return name
+    }
+    @Override
+    public void talk() {
+        
+    }
+}
+``
+## overload
+* we difine the same name method but with diffirent parameter
+‍‍‍‍‍``
+int f() {}
+int f(int a) 
+``
 
 ##  varargs;
 * if we have a method that has a lot of paramert we  can describe like this:
@@ -423,12 +448,16 @@ equals
 hashCode
 all of them are in iObjce
 ``
-# Composition<has a>
+# Composition<has a> 
+* it is better than 
 * it is different with is a< extenct>
 ``
 class Human {
+    use a classs
     private heart;
     privaet leftHand
     private rightHand
 }
 ``
+## Association
+## Aggregation
