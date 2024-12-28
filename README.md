@@ -461,3 +461,25 @@ class Human {
 ``
 ## Association
 ## Aggregation
+
+
+# Interface
+![alt text](./interface-1.png)
+* it is look like abstrac class
+* with tis we can multiple Inheritance of Bhavior
+
+``
+public interface Shape {
+    int getAtrea();
+    String getName 
+
+}
+impements
+``
+## what is different between abstrac and interface?
+
+
+# Inner Classes
+![alt text](./inner-class.png)
+![alt text](./inner-class2.png)
+* it can be final if it is final can not extend
