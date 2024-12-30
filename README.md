@@ -465,6 +465,7 @@ class Human {
 
 # Interface
 ![alt text](./interface-1.png)
+* in interface and abstrac we can not new but we can create annonims-inner-class(those class do not have name and inner a class)
 * it is look like abstrac class
 * with tis we can multiple Inheritance of Bhavior
 
@@ -476,10 +477,104 @@ public interface Shape {
 }
 impements
 ``
+``
+public class Animal {
+public stati void main(String[] args) {
+    CanMove c =  new Bird();
+    Can fly f = new Bird();
+    // wrong ==> CanMove cm = new CanMove() // because it is interface
+    // correct
+    <!-- inner class -->  new class in a class
+    CanMove hm =  new CanMove() {
+        @Override
+        public voide move() {
+
+        }
+    };
+}
+} 
+interface CanMove(){
+    void move();
+}
+interface CanRun extends CanMove {
+    void run();
+}
+interface CanFly extends CanMove {
+    void fly();
+}
+
+interface CanSwim extends CanMove {
+    void swim();
+}
+
+class Bird implements CanFly {
+    @Override
+    public void fly() {
+        System.out.println("i can fly");
+    }
+    @Override
+    public void fly() {
+        fly();
+    }
+}
+
+
+``
 ## what is different between abstrac and interface?
 
 
 # Inner Classes
+* imagine you have a button and when it click it do a beahvior we can not pass method in paramaet so we have to pass the object and it is good for it
 ![alt text](./inner-class.png)
 ![alt text](./inner-class2.png)
 * it can be final if it is final can not extend
+
+``
+abstrac class Protocol {
+    public abstract void f();
+}
+public class OuterClass {
+    private int value = 1;
+    public void outerMethod() {
+       Protocol inner = new Protocol() {
+        public void f() {
+            OuterClass.this.value = 2;
+        }
+       };
+       inner.f(); 
+    }
+
+    public static void main(String[] args) {
+        OuterClass outer = new OuterClass();
+        System.out.println(outer.value) //1
+        outer.outerMethod()
+        System.out.println(outer.value) //2
+    }
+}
+``
+
+# Exception
+* sotre in stack
+* that mean error
+* it show on run time not in compile
+``
+Exception Handling Error.
+public class ExceptionHandling {
+    public static void main(String args) {
+        try {
+            f()
+            g()
+        }catch(Exception e){
+            System.primtln(e.getMessage)
+            throw new Exception
+        }
+
+    }
+}
+``
+
+## stack trace
+* if we have a method and in there call an other method and if method B will be attend to catch it show on mrthod A and not on method B.
+``
+e.printStackTrace() 
+``
