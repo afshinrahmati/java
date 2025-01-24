@@ -578,3 +578,24 @@ public class ExceptionHandling {
 ``
 e.printStackTrace() 
 ``
+
+# Arrays
+0) array wih int[]
++ we can use primitive type there.
++ it is simple.
+- not dynamic array
+1) ArrayList : first step it is empty and you can add or remove esaliy.
+- Arraylist can not use in primirive types.
++ dynamic elemant
+```
+Arraylist<string> it is wrong
+```
+![alt text](./LINK_LIST.png)
+```
+ArrayList<Stundent | STRING | INTEGER | Character> student =  new ArrayList<Student>();\
+add,remove,get,size,isEmpty,set(1,90)
+```
+
+2) LINK_LIST: each elemeant not behaind each other like array and it eache elemant store the data in next node and node is a shower that identify which cell is full.
++ add,remove <beacue ArrayList copy when it shift or unshift>.
+- find by index it is bad and array is better.
